@@ -1,1 +1,42 @@
-<p>navbar works!</p>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container nav-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      Event<span>Sphere</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>Events</li>
+      <li>Venues</li>
+      <li>Vendors</li>
+      <li>About</li>
+    </ul>
+
+    <!-- Auth Buttons -->
+    <div class="auth-buttons">
+      <button class="login">Login</button>
+      <button class="register">Register</button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-btn" (click)="toggleMenu()">
+      ☰
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" *ngIf="menuOpen">
+    <a>Home</a>
+    <a>Events</a>
+    <a>Venues</a>
+    <a>Vendors</a>
+    <a>About</a>
+
+    <button>Login</button>
+    <button>Register</button>
+  </div>
+</nav>
