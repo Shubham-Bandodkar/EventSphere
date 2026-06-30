@@ -1,1 +1,27 @@
-<p>featured-events works!</p>
+<section class="featured-events">
+
+    <div class="container">
+
+        <app-section-header
+
+            title="Featured Events"
+
+            subtitle="Discover the most popular events happening around Goa."
+
+        />
+
+        <div class="event-grid">
+
+            <app-event-card
+
+                *ngFor="let event of events"
+
+                [event]="event">
+
+            </app-event-card>
+
+        </div>
+
+    </div>
+
+</section>

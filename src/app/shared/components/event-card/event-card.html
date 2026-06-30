@@ -1,0 +1,65 @@
+<div class="event-card">
+
+    <div class="image-wrapper">
+
+        <img
+            [src]="event.image"
+            [alt]="event.title">
+
+        <div class="category">
+
+            {{event.category}}
+
+        </div>
+
+        <div class="rating">
+
+            ★ {{event.rating}}
+
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <h3>
+
+            {{event.title}}
+
+        </h3>
+
+        <div class="info">
+
+            <span>
+
+                📍 {{event.location}}
+
+            </span>
+
+            <span>
+
+                📅 {{event.date}}
+
+            </span>
+
+        </div>
+
+        <div class="bottom">
+
+            <div class="price">
+
+                ₹{{event.price}}
+
+            </div>
+
+            <button>
+
+                Book Now
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
