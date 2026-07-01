@@ -1,1 +1,24 @@
-<p>featured-vendors works!</p>
+<section class="section">
+
+  <div class="container">
+
+    <app-section-header
+      title="Featured Vendors"
+      subtitle="Book trusted photographers, DJs, decorators, caterers and more for your next event.">
+    </app-section-header>
+
+    <div class="vendor-grid">
+
+      @for (vendor of vendors; track vendor.id) {
+
+        <app-vendor-card
+          [vendor]="vendor">
+        </app-vendor-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

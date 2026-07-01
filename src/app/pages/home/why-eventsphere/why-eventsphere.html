@@ -1,1 +1,46 @@
-<p>why-eventsphere works!</p>
+<section class="section why">
+
+    <div class="container">
+
+        <app-section-header
+            title="Why Choose EventSphere?"
+            subtitle="Everything you need to plan and book the perfect event.">
+        </app-section-header>
+
+        <div class="feature-grid">
+
+            @for(feature of features; track feature.title){
+
+                <div class="feature-card card">
+
+                    <div class="icon">
+
+                        <span class="material-icons">
+
+                            {{feature.icon}}
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        {{feature.title}}
+
+                    </h3>
+
+                    <p>
+
+                        {{feature.description}}
+
+                    </p>
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

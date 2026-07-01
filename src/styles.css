@@ -1,21 +1,16 @@
 @import "tailwindcss";
 
 html,
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #F8FAFC;
-    color: #1E293B;
-    scroll-behavior: smooth;
-}
+
 
 * {
     box-sizing: border-box;
 }
+
 body {
-  padding-top: 70px;
+    padding-top: 70px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -34,4 +29,204 @@ button {
     width: 90%;
     max-width: 1400px;
     margin: auto;
+}
+
+:root {
+
+    /* Brand */
+
+    --primary: #5B3DF5;
+    --primary-hover: #4930D1;
+    --secondary: #FF6B35;
+
+    /* Background */
+
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+
+    /* Text */
+
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+
+    /* Border */
+
+    --border: #E5E7EB;
+
+    /* Status */
+
+    --success: #16A34A;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+
+    /* Radius */
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+
+    /* Shadows */
+
+    --shadow-sm: 0 8px 20px rgba(0, 0, 0, .06);
+    --shadow-md: 0 12px 30px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 20px 45px rgba(0, 0, 0, .12);
+
+    /* Container */
+
+    --container-width: 1280px;
+
+}
+
+/* Reset */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--background);
+
+    color: var(--text-primary);
+
+}
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+button {
+
+    font-family: inherit;
+
+}
+
+.container {
+
+    width: min(90%, var(--container-width));
+
+    margin: auto;
+
+}
+
+.section {
+
+    padding: 100px 0;
+
+}
+
+.primary-btn {
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    font-weight: 600;
+
+}
+
+.primary-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: .3s;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-title p {
+    color: var(--text-secondary);
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+@media(max-width:992px){
+    h1{
+        font-size:48px;
+    }
+
+    h2{
+        font-size:34px;
+    }
+}
+
+@media(max-width:768px){
+    .section{
+        padding:70px 0;
+    }
 }

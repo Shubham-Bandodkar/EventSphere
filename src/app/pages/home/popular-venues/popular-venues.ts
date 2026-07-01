@@ -1,9 +1,26 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SectionHeader } from '../../../shared/components/section-header/section-header';
+import { VenueCard } from '../../../shared/components/venue-card/venue-card';
+import { VenueService } from '../../../core/services/venue';
+import { Venue } from '../../../core/models/venue.model';
 
 @Component({
   selector: 'app-popular-venues',
-  imports: [],
-  templateUrl: './popular-venues.html',
+ imports: [
+    CommonModule,
+    VenueCard,
+    SectionHeader
+  ],
+    templateUrl: './popular-venues.html',
   styleUrl: './popular-venues.css',
 })
-export class PopularVenues {}
+export class PopularVenues {
+   venues: Venue[] = [];
+
+  constructor(private venueService: VenueService){
+
+    this.venues = venueService.getPopularVenues();
+
+  }
+}

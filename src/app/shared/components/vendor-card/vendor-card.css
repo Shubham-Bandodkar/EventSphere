@@ -1,0 +1,87 @@
+.vendor-card{
+
+    overflow:hidden;
+
+}
+
+.image-wrapper{
+
+    height:230px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.image-wrapper img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.vendor-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.verified{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:white;
+
+    padding:8px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.content{
+
+    padding:25px;
+
+}
+
+.category{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.rating{
+
+    margin:15px 0;
+
+    color:#f59e0b;
+
+}
+
+.bottom{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}

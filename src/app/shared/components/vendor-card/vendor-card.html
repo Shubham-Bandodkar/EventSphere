@@ -1,0 +1,46 @@
+<div class="vendor-card card">
+
+  <div class="image-wrapper">
+
+    <img [src]="vendor.image" [alt]="vendor.name">
+
+    @if (vendor.verified) {
+      <div class="verified">
+        ✓ Verified
+      </div>
+    }
+
+  </div>
+
+  <div class="content">
+
+    <h3>{{ vendor.name }}</h3>
+
+    <span class="category">{{ vendor.category }}</span>
+
+    <div class="rating">
+      ⭐ {{ vendor.rating }}
+      <span>({{ vendor.reviewCount }} Reviews)</span>
+    </div>
+
+    <p>📍 {{ vendor.location }}</p>
+
+    <div class="bottom">
+
+      <div>
+
+        <small>Starting From</small>
+
+        <h4>₹{{ vendor.startingPrice | number }}</h4>
+
+      </div>
+
+      <button class="primary-btn">
+        Book
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,1 +1,29 @@
-<p>popular-venues works!</p>
+<section class="section">
+
+    <div class="container">
+
+        <app-section-header
+
+            title="Popular Venues"
+
+            subtitle="Discover Goa's most loved wedding venues, resorts and event spaces."
+
+        />
+
+        <div class="venue-grid">
+
+            @for(venue of venues; track venue.id){
+
+                <app-venue-card
+
+                    [venue]="venue">
+
+                </app-venue-card>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

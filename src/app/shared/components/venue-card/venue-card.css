@@ -1,0 +1,139 @@
+.venue-card{
+
+    overflow:hidden;
+
+}
+
+.image-wrapper{
+
+    position:relative;
+
+    height:250px;
+
+    overflow:hidden;
+
+}
+
+.image-wrapper img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.venue-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.verified{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:white;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.wishlist{
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.wishlist:hover{
+
+    background:#ffebee;
+
+}
+
+.content{
+
+    padding:25px;
+
+}
+
+.content h3{
+
+    margin-bottom:15px;
+
+}
+
+.rating{
+
+    color:#f59e0b;
+
+    margin-bottom:15px;
+
+}
+
+.rating span{
+
+    color:var(--text-secondary);
+
+    font-size:14px;
+
+}
+
+.content p{
+
+    margin-bottom:12px;
+
+}
+
+.bottom{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.bottom h4{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
