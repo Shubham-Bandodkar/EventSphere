@@ -1,1 +1,36 @@
-<p>upcoming-events works!</p>
+<section class="section">
+
+    <div class="container">
+
+        <app-section-header
+            title="Upcoming Events"
+            subtitle="Explore exciting events happening across Goa.">
+        </app-section-header>
+
+        <app-carousel
+            [items]="events"
+            [config]="carouselConfig">
+
+            <ng-template let-event>
+
+                <app-upcoming-event-card
+                    [event]="event">
+                </app-upcoming-event-card>
+
+            </ng-template>
+
+        </app-carousel>
+
+        <div class="view-all">
+
+            <button class="primary-btn">
+
+                View All Events
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,159 @@
+.carousel {
+
+  position: relative;
+
+  width: 100%;
+
+}
+
+.viewport {
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+
+}
+
+.track {
+
+  display: flex;
+
+  transition: transform .55s cubic-bezier(.22,.61,.36,1);
+
+  will-change: transform;
+
+}
+
+.slide {
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+}
+
+/* ===========================
+   Navigation Buttons
+=========================== */
+
+.nav {
+
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 54px;
+
+  height: 54px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: rgba(255,255,255,.75);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+  transition: .25s;
+
+  z-index: 20;
+
+}
+
+.nav:hover {
+
+  transform: translateY(-50%) scale(1.08);
+
+  background: white;
+
+}
+
+.prev {
+
+  left: -24px;
+
+}
+
+.next {
+
+  right: -24px;
+
+}
+
+/* ===========================
+   Pagination
+=========================== */
+
+.dots {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+}
+
+.dot {
+
+  width: 12px;
+
+  height: 12px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #d1d5db;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+}
+
+.dot.active {
+
+  width: 34px;
+
+  border-radius: 30px;
+
+  background: var(--primary);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.nav{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.slide{
+
+padding:8px;
+
+}
+
+}

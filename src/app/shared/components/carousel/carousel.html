@@ -1,0 +1,99 @@
+<div
+class="carousel"
+
+(mouseenter)="stopAutoPlay()"
+
+(mouseleave)="startAutoPlay()">
+
+    @if(config.showArrows){
+
+    <button
+        class="nav prev"
+        (click)="previous()">
+
+        <span class="material-icons">
+chevron_left
+</span>
+
+    </button>
+
+    }
+
+    <div
+class="viewport"
+
+(touchstart)="onTouchStart($event)"
+
+(touchend)="onTouchEnd($event)">
+
+        <div
+
+        class="track"
+
+        [style.transform]="
+'translateX(-'+(currentIndex*(100/config.visibleItems))+'%)'
+">
+
+            @for(item of items; track $index){
+
+            <div
+
+            class="slide"
+
+            [style.flex]="'0 0 calc(100% / '+config.visibleItems+')'">
+
+                <ng-container
+
+                *ngTemplateOutlet="template;
+
+                context:{$implicit:item}">
+
+                </ng-container>
+
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+    @if(config.showArrows){
+
+    <button
+
+    class="nav next"
+
+    (click)="next()">
+
+        <span class="material-icons">
+chevron_right
+</span>
+
+    </button>
+
+    }
+
+</div>
+
+@if(config.showDots){
+
+<div class="dots">
+
+@for(item of items;track $index){
+
+<button
+
+class="dot"
+
+[class.active]="currentIndex==$index"
+
+(click)="goTo($index)">
+
+</button>
+
+}
+
+</div>
+
+}

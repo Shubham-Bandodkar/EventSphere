@@ -1,0 +1,15 @@
+.view-all{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:50px;
+
+}
+
+.primary-btn{
+
+    padding:14px 32px;
+
+}
