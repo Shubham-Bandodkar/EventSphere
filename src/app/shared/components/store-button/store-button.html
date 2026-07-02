@@ -1,0 +1,39 @@
+<button class="store-btn">
+
+    <div class="icon">
+
+        @if(platform === 'apple'){
+
+            <span class="material-icons">
+                phone_iphone
+            </span>
+
+        } @else {
+
+            <span class="material-icons">
+                play_arrow
+            </span>
+
+        }
+
+    </div>
+
+    <div class="text">
+
+        @if(platform === 'apple'){
+
+            <small>Download on the</small>
+
+            <strong>App Store</strong>
+
+        } @else {
+
+            <small>GET IT ON</small>
+
+            <strong>Google Play</strong>
+
+        }
+
+    </div>
+
+</button>
