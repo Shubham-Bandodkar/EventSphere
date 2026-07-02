@@ -1,1 +1,52 @@
-<p>how-it-works works!</p>
+<section class="section">
+
+  <div class="container">
+
+    <app-section-header
+      title="How EventSphere Works"
+      subtitle="Book your perfect event in four simple steps.">
+    </app-section-header>
+
+    <div class="steps-grid">
+
+      @for(step of steps; track step.step){
+
+      <div class="step-card card">
+
+        <div class="step-number">
+
+          {{step.step}}
+
+        </div>
+
+        <div class="icon">
+
+          <span class="material-icons">
+
+            {{step.icon}}
+
+          </span>
+
+        </div>
+
+        <h3>
+
+          {{step.title}}
+
+        </h3>
+
+        <p>
+
+          {{step.description}}
+
+        </p>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
