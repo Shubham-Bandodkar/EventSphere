@@ -1,0 +1,153 @@
+.newsletter-section{
+
+    background:linear-gradient(
+        135deg,
+        #EEF2FF,
+        #F9FAFB
+    );
+
+}
+
+.newsletter-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:70px 60px;
+
+    border-radius:28px;
+
+}
+
+.newsletter-card h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.newsletter-card p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+.newsletter-form{
+
+    display:flex;
+
+    gap:18px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.newsletter-form input{
+
+    flex:1;
+
+    min-width:300px;
+
+    max-width:450px;
+
+    padding:18px 22px;
+
+    border-radius:14px;
+
+    border:1px solid #E5E7EB;
+
+    font-size:16px;
+
+}
+
+.newsletter-form input:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+}
+
+.newsletter-form button{
+
+    padding:18px 36px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.newsletter-benefits{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+    color:var(--text-secondary);
+
+    font-size:15px;
+
+}
+
+@media(max-width:768px){
+
+.newsletter-card{
+
+padding:50px 25px;
+
+}
+
+.newsletter-card h2{
+
+font-size:32px;
+
+}
+
+.newsletter-form{
+
+flex-direction:column;
+
+}
+
+.newsletter-form input{
+
+max-width:100%;
+
+}
+
+.newsletter-form button{
+
+width:100%;
+
+}
+
+}

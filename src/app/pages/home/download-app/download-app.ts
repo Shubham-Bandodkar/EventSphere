@@ -4,6 +4,8 @@ import { StoreButton } from '../../../shared/components/store-button/store-butto
 import { PhoneMockup } from '../../../shared/components/phone-mockup/phone-mockup';
 import { FeatureItem } from '../../../shared/components/feature-item/feature-item';
 import { Badge } from '../../../shared/components/badge/badge';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll';
+import { SectionHeader } from '../../../shared/components/section-header/section-header';
 
 @Component({
   selector: 'app-download-app',
@@ -12,7 +14,8 @@ import { Badge } from '../../../shared/components/badge/badge';
     Badge,
     FeatureItem,
     PhoneMockup,
-    StoreButton
+    StoreButton,  SectionHeader,
+    AnimateOnScrollDirective
   ],  templateUrl: './download-app.html',
   styleUrl: './download-app.css',
 })

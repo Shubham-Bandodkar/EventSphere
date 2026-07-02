@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SectionHeader } from '../../../shared/components/section-header/section-header';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll';
+
 interface Category {
   title: string;
   icon: string;
@@ -7,7 +10,11 @@ interface Category {
 }
 @Component({
   selector: 'app-categories',
-  imports: [CommonModule],
+    imports: [
+    CommonModule,
+    SectionHeader,
+    AnimateOnScrollDirective
+  ],
   templateUrl: './categories.html',
   styleUrl: './categories.css',
 })

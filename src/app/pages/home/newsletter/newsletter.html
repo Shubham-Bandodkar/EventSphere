@@ -1,1 +1,50 @@
-<p>newsletter works!</p>
+<section class="newsletter-section section">
+
+    <div class="container">
+
+        <div class="newsletter-card card">
+
+            <h2>
+
+                Stay Updated with EventSphere
+
+            </h2>
+
+            <p>
+
+                Subscribe to receive event updates, exclusive offers, new venues,
+                and exciting experiences across Goa.
+
+            </p>
+
+            <div class="newsletter-form">
+
+                <input
+                    type="email"
+                    [(ngModel)]="email"
+                    placeholder="Enter your email">
+
+                <button
+                    (click)="subscribe()">
+
+                    Subscribe
+
+                </button>
+
+            </div>
+
+            <div class="newsletter-benefits">
+
+                <span>✓ Weekly Event Updates</span>
+
+                <span>✓ Exclusive Offers</span>
+
+                <span>✓ Early Access</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

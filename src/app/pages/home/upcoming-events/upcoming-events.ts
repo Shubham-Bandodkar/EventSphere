@@ -6,13 +6,14 @@ import { UpcomingEventService } from '../../../core/services/upcoming-event';
 import { CommonModule } from '@angular/common';
 import { Carousel } from '../../../shared/components/carousel/carousel';
 import { CarouselConfig } from '../../../core/models/carousel.types';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll';
 @Component({
   selector: 'app-upcoming-events',
   imports: [
     CommonModule,
     SectionHeader,
     Carousel,
-    UpcomingEventCard
+    UpcomingEventCard,AnimateOnScrollDirective
   ],
   templateUrl: './upcoming-events.html',
   styleUrl: './upcoming-events.css',

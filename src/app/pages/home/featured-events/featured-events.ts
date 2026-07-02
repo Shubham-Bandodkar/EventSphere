@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Event } from '../../../core/models/event.model';
 import { EventCard } from '../../../shared/components/event-card/event-card';
 import { SectionHeader } from '../../../shared/components/section-header/section-header';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll';
 @Component({
   selector: 'app-featured-events',
   imports: [
     CommonModule,
     EventCard,
-    SectionHeader
+    SectionHeader, 
+    AnimateOnScrollDirective
   ],
   templateUrl: './featured-events.html',
   styleUrl: './featured-events.css',

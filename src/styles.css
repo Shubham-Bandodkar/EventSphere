@@ -135,9 +135,77 @@ button {
 
 }
 
-.section {
+.section{
 
-    padding: 100px 0;
+    position:relative;
+
+    padding:100px 0;
+
+}
+
+.section-sm{
+
+    padding:70px 0;
+
+}
+
+.section-lg{
+
+    padding:140px 0;
+
+}
+.section-divider{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:120px;
+
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,.08),
+        transparent
+    );
+
+}
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    border:1px solid rgba(0,0,0,.05);
+
+    box-shadow:
+
+        0 8px 24px rgba(15,23,42,.05);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+}
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(91,61,245,.20);
+
+    box-shadow:
+
+        0 30px 60px rgba(91,61,245,.12);
 
 }
 
@@ -252,5 +320,28 @@ p {
     transition:
       opacity .8s ease,
       transform .8s ease;
+
+}
+img{
+
+transition:transform .5s ease;
+
+}
+
+.card:hover img{
+
+transform:scale(1.05);
+
+}
+
+button{
+
+transition:all .3s ease;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
 
 }
