@@ -1,0 +1,46 @@
+<div class="testimonial-card card">
+
+  <img
+    [src]="testimonial.image"
+    [alt]="testimonial.name"
+    class="avatar">
+
+  <div class="stars">
+
+    @for(star of [1,2,3,4,5]; track star){
+
+      <span class="material-icons star">
+
+        star
+
+      </span>
+
+    }
+
+  </div>
+
+  <p class="comment">
+
+    "{{testimonial.comment}}"
+
+  </p>
+
+  <h3>
+
+    {{testimonial.name}}
+
+  </h3>
+
+  <span class="location">
+
+    {{testimonial.city}}
+
+  </span>
+
+  <div class="event-chip">
+
+    {{testimonial.eventType}}
+
+  </div>
+
+</div>

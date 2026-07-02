@@ -1,1 +1,26 @@
-<p>testimonials works!</p>
+<section class="section" appAnimateOnScroll>
+
+  <div class="container">
+
+    <app-section-header
+      title="What Our Customers Say"
+      subtitle="Thousands of happy customers trust EventSphere for unforgettable experiences.">
+    </app-section-header>
+
+    <app-carousel
+      [items]="testimonials"
+      [config]="carouselConfig">
+
+      <ng-template let-testimonial>
+
+        <app-testimonial-card
+          [testimonial]="testimonial">
+        </app-testimonial-card>
+
+      </ng-template>
+
+    </app-carousel>
+
+  </div>
+
+</section>

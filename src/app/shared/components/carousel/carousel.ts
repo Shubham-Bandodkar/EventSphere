@@ -105,6 +105,17 @@ onTouchEnd(event: TouchEvent){
   this.handleSwipe();
 }
 
+get totalPages(): number {
+  return Math.max(
+    this.items.length - this.config.visibleItems + 1,
+    1
+  );
+}
+
+get pages(): number[] {
+  return Array.from({ length: this.totalPages }, (_, i) => i);
+}
+
 handleSwipe(){
 
   if(this.touchEnd < this.touchStart - 60){

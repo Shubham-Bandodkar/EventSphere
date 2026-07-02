@@ -1,0 +1,71 @@
+.testimonial-card{
+
+    text-align:center;
+
+    padding:40px 35px;
+
+}
+
+.avatar{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.stars{
+
+    color:#f59e0b;
+
+    margin-bottom:20px;
+
+}
+
+.comment{
+
+    font-style:italic;
+
+    line-height:1.8;
+
+    color:var(--text-secondary);
+
+    margin-bottom:25px;
+
+    min-height:110px;
+
+}
+
+.location{
+
+    color:var(--text-secondary);
+
+}
+
+.event-chip{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 18px;
+
+    background:rgba(91,61,245,.08);
+
+    color:var(--primary);
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}

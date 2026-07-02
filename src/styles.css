@@ -212,7 +212,7 @@ h3 {
 }
 
 p {
-    color: var(--text-secondary);
+        color: #dae2f9;
 }
 
 @media(max-width:992px){
@@ -229,4 +229,28 @@ p {
     .section{
         padding:70px 0;
     }
+}
+
+/* ===========================
+   Scroll Animations
+=========================== */
+
+.animate-hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.animate-visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+      opacity .8s ease,
+      transform .8s ease;
+
 }

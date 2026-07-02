@@ -1,99 +1,77 @@
 <div
-class="carousel"
+  class="carousel"
+  (mouseenter)="stopAutoPlay()"
+  (mouseleave)="startAutoPlay()">
 
-(mouseenter)="stopAutoPlay()"
-
-(mouseleave)="startAutoPlay()">
-
-    @if(config.showArrows){
-
+  @if (config.showArrows) {
     <button
-        class="nav prev"
-        (click)="previous()">
+      class="nav prev"
+      (click)="previous()">
 
-        <span class="material-icons">
-chevron_left
-</span>
+      <span class="material-icons">
+        chevron_left
+      </span>
 
     </button>
+  }
 
-    }
+  <div
+    class="viewport"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)">
 
     <div
-class="viewport"
+      class="track"
+      [style.transform]="'translateX(-' + (currentIndex * (100 / config.visibleItems)) + '%)'">
 
-(touchstart)="onTouchStart($event)"
-
-(touchend)="onTouchEnd($event)">
+      @for (item of items; track $index) {
 
         <div
+          class="slide"
+          [style.flex]="'0 0 calc(100% / ' + config.visibleItems + ')'">
 
-        class="track"
-
-        [style.transform]="
-'translateX(-'+(currentIndex*(100/config.visibleItems))+'%)'
-">
-
-            @for(item of items; track $index){
-
-            <div
-
-            class="slide"
-
-            [style.flex]="'0 0 calc(100% / '+config.visibleItems+')'">
-
-                <ng-container
-
-                *ngTemplateOutlet="template;
-
-                context:{$implicit:item}">
-
-                </ng-container>
-
-            </div>
-
-            }
+          <ng-container
+            *ngTemplateOutlet="template; context: { $implicit: item }">
+          </ng-container>
 
         </div>
 
+      }
+
     </div>
 
-    @if(config.showArrows){
+  </div>
+
+  @if (config.showArrows) {
 
     <button
+      class="nav next"
+      (click)="next()">
 
-    class="nav next"
-
-    (click)="next()">
-
-        <span class="material-icons">
-chevron_right
-</span>
+      <span class="material-icons">
+        chevron_right
+      </span>
 
     </button>
 
+  }
+
+</div>
+
+@if (config.showDots) {
+
+  <div class="dots">
+
+    @for (page of pages; track page) {
+
+      <button
+        class="dot"
+        [class.active]="currentIndex === page"
+        (click)="goTo(page)">
+      </button>
+
     }
 
-</div>
-
-@if(config.showDots){
-
-<div class="dots">
-
-@for(item of items;track $index){
-
-<button
-
-class="dot"
-
-[class.active]="currentIndex==$index"
-
-(click)="goTo($index)">
-
-</button>
-
-}
-
-</div>
+  </div>
 
 }
